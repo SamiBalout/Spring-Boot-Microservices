@@ -1,0 +1,27 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: driver-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/driverservice?createDatabaseIfNotExist=true
+    username: root
+    password: rootroot
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+#Connect Swagger
+springdoc:
+  api-docs:
+    path: /news-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+#Register Eureka Client
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true

@@ -1,0 +1,24 @@
+server:
+  port: 8002
+  
+spring:
+  application:
+    name: insurance-service
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: microservice
+
+#Connect Swagger   
+springdoc:
+  api-docs:
+    path: /news-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+#Register Eureka Client
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
